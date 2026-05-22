@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlene Rossouw Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="tagline-box">
+      <div class="logo-circle">CR</div>
+
+      <p class="tagline">Creative Designer & Brand Visuals</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about-section">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate creative designer specializing in advertising and promotional design.
+    I enjoy crafting eye‑catching visuals that help businesses stand out and attract customers.
+    My work focuses on clear communication, bold layouts, and strong visuals across industries
+    including retail, hospitality, fitness, real estate, and events.
+  </p>
+  <p>
+    I am continuously developing my skills and exploring new ideas to deliver professional
+    and engaging designs. My design philosophy blends clarity with emotion — every project
+    tells a story through color, composition, and subtle detail. I believe design should not
+    only look beautiful but also feel meaningful, inspiring connection and confidence.
+  </p>
+</section>
+
+<!-- About Sound -->
+<audio id="aboutChime" src="sounds/aboutchime.wav" preload="auto"></audio>
+
+<style>
+/* --- About Section Styling --- */
+.about-section {
+  background: linear-gradient(180deg, #fdf6ff 0%, #f9f3ff 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: #5a2d91;
+  font-family: "Poppins", sans-serif;
+  animation: fadeInAbout 1.5s ease-in;
+}
+
+.about-section h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(170, 120, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #6a1b9a;
+}
+
+/* --- Soft Fade Animation --- */
+@keyframes fadeInAbout {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Hover Accent --- */
+.about-section:hover {
+  background: linear-gradient(180deg, #f9f3ff 0%, #fdf6ff 100%);
+  box-shadow: inset 0 0 30px rgba(170, 120, 255, 0.2);
+}
+</style>
+
+<script>
+// --- About Section Sound Cue ---
+const aboutTitle = document.querySelector(".about-section h2");
+const aboutChime = document.getElementById("aboutChime");
+
+aboutTitle.addEventListener("mouseenter", () => {
+  aboutChime.currentTime = 0;
+  aboutChime.volume = 0.4; // gentle but clear
+  aboutChime.play();
+
+  // Fade-out after 2 seconds
+  setTimeout(() => {
+    const fadeOut = setInterval(() => {
+      if (aboutChime.volume > 0) {
+        aboutChime.volume -= 0.1;
+      } else {
+        clearInterval(fadeOut);
+        aboutChime.pause();
+        aboutChime.currentTime = 0; // reset to start
+      }
+    }, 100);
+  }, 2000);
+});
+</script>
+
+  </section>
+
+ <!-- 🌸 PORTFOLIO SECTION -->
+<section id="portfolio" class="portfolio-section">
+  <h2>My Designs</h2>
+  <p>Showcasing my creative pastel designs and digital products.</p>
+
+  <div class="portfolio-cards">
+    <div class="portfolio-card">Affirmation Pack</div>
+    <div class="portfolio-card">Journaling Pages</div>
+    <div class="portfolio-card">Social Media Templates</div>
+  </div>
+
+  <!-- ✨ Sound Effect -->
+  <audio id="portfolioSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .portfolio-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 80px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 10px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .portfolio-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .portfolio-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .portfolio-card {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .portfolio-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 💜 SOUND SCRIPT -->
+<script>
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const portfolioSound = document.getElementById('portfolioSound');
+
+  portfolioCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      portfolioSound.currentTime = 0;
+      portfolioSound.play();
+    });
+  });
+</script>
+<!-- 🌸 GALLERY / AFFIRMATION PACK -->
+<section id="gallery" class="gallery-section">
+  <h2>Affirmation Pack</h2>
+  <p>Soft pastel affirmation cards designed to inspire positivity.</p>
+  <!-- ✨ Affirmation Cards -->
+  <div class="gallery-cards">
+    <div class="gallery-card">Affirmation Card 1</div>
+    <div class="gallery-card">Affirmation Card 2</div>
+    <div class="gallery-card">Affirmation Card 3</div>
+  </div>
+
+  <!-- 🌈 Order Form -->
+  <div class="order-form-container">
+    <form action="https://formspree.io/f/xwvywdkz" method="POST" class="order-form">
+      <h4>Order Affirmation Pack</h4>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message / Request:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <input type="hidden" name="product" value="Affirmation Pack">
+      <button type="submit" class="order-button">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="gallerySound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .gallery-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 80px;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 10px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .gallery-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .gallery-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .gallery-card {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .gallery-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+
+  .order-form-container {
+    text-align: center;
+    margin-top: 60px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .order-form {
+    display: inline-block;
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    padding: 25px 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #5a2d91;
+    font-weight: 600;
+  }
+
+  .order-form label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #d8b4e2;
+  }
+
+  .order-button {
+    margin-top: 15px;
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+    color: #5a2d91;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+  .order-button:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 💜 SOUND SCRIPT -->
+<script>
+  const galleryCards = document.querySelectorAll('.gallery-card');
+  const gallerySound = document.getElementById('gallerySound');
+
+  galleryCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gallerySound.currentTime = 0;
+      gallerySound.play();
+    });
+  });
+</script>
+<!-- 🌸 AFFIRMATION PACK SHOWCASE -->
+<section id="affirmations" class="affirmation-section">
+  <h2>Affirmation Pack</h2>
+  <p>Pastel cards designed to inspire positivity and joy.</p>
+
+  
+  <div class="affirmation-cards">
+    <!-- Card 1 -->
+    <div class="affirmation-card" onclick="scrollToOrder('affirmationOrder')">
+      <div class="card-inner">
+        <div class="card-front">
+          <p>I am enough</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+        <div class="card-back">
+          <p>I am worthy</p>
+          <p>I am loved</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Card 2 -->
+    <div class="affirmation-card" onclick="scrollToOrder('affirmationOrder')">
+      <div class="card-inner">
+        <div class="card-front">
+          <p>Peace flows through me</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+        <div class="card-back">
+          <p>Calm surrounds me</p>
+          <p>I trust the process</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="affirmation-card" onclick="scrollToOrder('affirmationOrder')">
+      <div class="card-inner">
+        <div class="card-front">
+          <p>I choose joy</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+        <div class="card-back">
+          <p>Happiness finds me</p>
+          <p>Gratitude fills my heart</p>
+          <span class="watermark">CR Designs ©</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="affirmationSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .affirmation-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    margin-bottom: 80px;
+  }
+
+  .affirmation-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 20px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .affirmation-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .affirmation-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .affirmation-card {
+    perspective: 1000px;
+    width: 220px;
+    height: 150px;
+    cursor: pointer;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .affirmation-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 0.8em;
+    color: rgba(90, 45, 145, 0.4);
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 💜 SOUND + SCROLL SCRIPT -->
+<script>
+  const affirmationCards = document.querySelectorAll('.affirmation-card');
+  const affirmationSound = document.getElementById('affirmationSound');
+
+  affirmationCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      affirmationSound.currentTime = 0;
+      affirmationSound.play();
+    });
+  });
+
+  function scrollToOrder(orderId) {
+    const orderSection = document.getElementById(orderId);
+    if (orderSection) {
+      orderSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+<section class="affirmations-section">
+  <div class="affirmation-row">
+    <!-- Video 1 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Video 1 — R60 / $3</h2>
+      <video controls class="affirmation-video">
+        <source src="videos/affirmations1.mp4" type="video/mp4">
+      </video>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Video 1 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+
+    <!-- Card Set 1 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Card Set 1 — R60 / $3</h2>
+      <div class="cards">
+        <img src="images/affirmationscard1.png" alt="Card 1">
+        <img src="images/affirmationscard2.png" alt="Card 2">
+        <img src="images/affirmationscard3.png" alt="Card 3">
+        <img src="images/affirmationscard4.png" alt="Card 4">
+        <img src="images/affirmationscard5.png" alt="Card 5">
+        <img src="images/affirmationscard6.png" alt="Card 6">
+      </div>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Card Set 1 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+
+    <!-- Video 2 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Video 2 — R60 / $3</h2>
+      <video controls class="affirmation-video">
+        <source src="videos/affirmations2.mp4" type="video/mp4">
+      </video>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Video 2 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+
+    <!-- Card Set 2 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Card Set 2 — R60 / $3</h2>
+      <div class="cards">
+        <img src="images/affirmationscard7.png" alt="Card 7">
+        <img src="images/affirmationscard8.png" alt="Card 8">
+        <img src="images/affirmationscard9.png" alt="Card 9">
+        <img src="images/affirmationscard10.png" alt="Card 10">
+        <img src="images/affirmationscard11.png" alt="Card 11">
+        <img src="images/affirmationscard12.png" alt="Card 12">
+      </div>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Card Set 2 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+
+    <!-- Video 3 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Video 3 — R60 / $3</h2>
+      <video controls class="affirmation-video">
+        <source src="videos/affirmations3.mp4" type="video/mp4">
+      </video>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Video 3 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+
+    <!-- Card Set 3 -->
+    <section class="affirmation-pack">
+      <h2>Affirmation Card Set 3 — R60 / $3</h2>
+      <div class="cards">
+        <img src="images/affirmationscard13.png" alt="Card 13">
+        <img src="images/affirmationscard14.png" alt="Card 14">
+        <img src="images/affirmationscard15.png" alt="Card 15">
+        <img src="images/affirmationscard16.png" alt="Card 16">
+        <img src="images/affirmationscard17.png" alt="Card 17">
+        <img src="images/affirmationscard18.png" alt="Card 18">
+      </div>
+      <button class="order-btn" onclick="openOrderForm('Affirmation Card Set 3 — R60 / $3')">
+        🎵 Order Now — R60 / $3
+      </button>
+      <p class="copyright">© Charlene Rossouw — All Rights Reserved</p>
+    </section>
+  </div>
+</section>
+
+<style>
+  .affirmations-section {
+    background: linear-gradient(to bottom, #f9f5ff 0%, #e6d9ff 100%);
+    padding: 40px 0;
+    border-radius: 20px;
+  }
+
+  .affirmation-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+  }
+
+  .affirmation-pack {
+    width: 260px;
+    background: linear-gradient(135deg, #e8b6ff, #ffdee9);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(232, 182, 255, 0.4);
+    animation: flickerGlow 3s infinite alternate;
+  }
+
+  .affirmation-pack h2 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #7b3fa0;
+    margin-bottom: 10px;
+  }
+
+  .affirmation-video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255, 182, 217, 0.4);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-items: center;
+    margin-bottom: 10px;
+  }
+
+  .cards img {
+    width: 70px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8b6ff, #ffdee9);
+    box-shadow: 0 0 8px rgba(255, 182, 217, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .cards img:hover {
+    transform: scale(1.1);
+  }
+
+  .order-btn {
+    background: linear-gradient(135deg, #e8b6ff, #ffdee9);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(232, 182, 255, 0.6);
+    transition: all 0.3s ease;
+  }
+
+  .order-btn:hover {
+    background: linear-gradient(135deg, #ffdee9, #e8b6ff);
+    box-shadow: 0 0 15px rgba(255, 182, 217, 0.8);
+    transform: scale(1.05);
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    color: #7b3fa0;
+    margin-top: 8px;
+  }
+
+  @keyframes flickerGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 182, 217, 0.4); }
+    50% { box-shadow: 0 0 15px rgba(232, 182, 255, 0.6); }
+    100% { box-shadow: 0 0 20px rgba(255, 182, 217, 0.8); }
+  }
+</style>
+
+<script>
+  function openOrderForm(packName) {
+    const emailSection = document.getElementById("affirmation-order");
+    if (emailSection) {
+      emailSection.scrollIntoView({ behavior: "smooth" });
+      const subjectField = document.getElementById("order-subject");
+      if (subjectField) subjectField.value = packName;
+      const audio = new Audio("sounds/click.mp3");
+
+<!-- 🌸 JOURNALING SECTION -->
+<section id="journaling" class="journaling-section">
+  <h2>Journaling Pages</h2>
+  <p>Explore my pastel journaling templates — soft, mindful, and designed for reflection.</p>
+
+  <!-- ✨ Journaling Cards -->
+  <div class="journaling-cards">
+    <div class="journal-card">Journaling Page 1</div>
+    <div class="journal-card">Journaling Page 2</div>
+    <div class="journal-card">Journaling Page 3</div>
+  </div>
+
+  <!-- 🌈 Order Form -->
+  <div class="order-form-container">
+    <form action="https://formspree.io/f/xwvywdkz" method="POST" class="order-form">
+      <h4>Order Journaling Pages</h4>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message / Request:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <input type="hidden" name="product" value="Journaling Pages">
+      <button type="submit" class="order-button">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="journalSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .journaling-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 80px;
+  }
+
+  .journaling-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 10px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .journaling-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .journaling-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .journal-card {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .journal-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+</style>
+
+<!-- 💜 SOUND SCRIPT -->
+<script>
+  const journalCards = document.querySelectorAll('.journal-card');
+  const journalSound = document.getElementById('journalSound');
+
+  journalCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      journalSound.currentTime = 0;
+      journalSound.play();
+    });
+  });
+</script>
+<!-- 🌸 JOURNALING PACKS SHOWCASE -->
+<section id="journaling" class="journaling-section">
+  <h2>Journaling Packs</h2>
+  <p>Choose the pack that fits your lifestyle and goals.</p>
+
+  <!-- Pack 1: Family Focus -->
+  <div class="journaling-pack">
+    <h3>Family Focus Pack</h3>
+    <div class="journaling-cards">
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Family Planner</p><span class="watermark">CR Designs ©</span>
+      </div>
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Mom’s Weekly Goals</p><span class="watermark">CR Designs ©</span>
+      </div>
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Dad’s Weekly Goals</p><span class="watermark">CR Designs ©</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pack 2: Personal Growth -->
+  <div class="journaling-pack">
+    <h3>Personal Growth Pack</h3>
+    <div class="journaling-cards">
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Daily Gratitude</p><span class="watermark">CR Designs ©</span>
+      </div>
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Dream Tracker</p><span class="watermark">CR Designs ©</span>
+      </div>
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>School & Fitness Log</p><span class="watermark">CR Designs ©</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pack 3: Professional / Support -->
+  <div class="journaling-pack">
+    <h3>Professional & Support Pack</h3>
+    <div class="journaling-cards">
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Monthly KPI Tracker</p><span class="watermark">CR Designs ©</span>
+      </div>
+      <div class="journaling-card" onclick="scrollToOrder('journalingOrder')">
+        <p>Client Progress Journal</p><span class="watermark">CR Designs ©</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="journalingSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .journaling-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    margin-bottom: 80px;
+  }
+
+  .journaling-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 20px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .journaling-pack {
+    margin-bottom: 50px;
+  }
+
+  .journaling-pack h3 {
+    font-size: 1.8em;
+    color: #5a2d91;
+    margin-bottom: 20px;
+  }
+
+  .journaling-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .journaling-card {
+    position: relative;
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .journaling-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 0.8em;
+    color: rgba(90, 45, 145, 0.4);
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 💜 SOUND + SCROLL SCRIPT -->
+<script>
+  const journalingCards = document.querySelectorAll('.journaling-card');
+  const journalingSound = document.getElementById('journalingSound');
+
+  journalingCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      journalingSound.currentTime = 0;
+      journalingSound.play();
+    });
+  });
+
+  function scrollToOrder(orderId) {
+    const orderSection = document.getElementById(orderId);
+    if (orderSection) {
+      orderSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+<!-- 🌸 SOCIAL MEDIA SECTION -->
+<section id="socialmedia" class="socialmedia-section">
+  <h2>Social Media Templates</h2>
+  <p>Bright, pastel templates designed to make your posts shine.</p>
+
+  <!-- ✨ Social Media Cards -->
+  <div class="socialmedia-cards">
+    <div class="social-card">Instagram Template</div>
+    <div class="social-card">LinkedIn Template</div>
+    <div class="social-card">Email Template</div>
+  </div>
+
+  <!-- 🌈 Order Form -->
+  <div class="order-form-container">
+    <form action="https://formspree.io/f/xwvywdkz" method="POST" class="order-form">
+      <h4>Order Social Media Templates</h4>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message / Request:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <input type="hidden" name="product" value="Social Media Templates">
+      <button type="submit" class="order-button">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="socialSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .socialmedia-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 80px;
+  }
+
+  .socialmedia-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 10px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .socialmedia-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .socialmedia-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .social-card {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .social-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+</style>
+
+<!-- 💜 SOUND SCRIPT -->
+<script>
+  const socialCards = document.querySelectorAll('.social-card');
+  const socialSound = document.getElementById('socialSound');
+
+  socialCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      socialSound.currentTime = 0;
+      socialSound.play();
+    });
+  });
+</script>
+<!-- 🌸 SOCIAL MEDIA TEMPLATES SHOWCASE -->
+<section id="socialmedia" class="socialmedia-section">
+  <h2>Social Media Templates</h2>
+  <p>Editable pastel templates for Instagram, LinkedIn, and Email branding.</p>
+
+  <!-- Instagram Posts -->
+  <div class="socialmedia-pack">
+    <h3>Instagram Posts</h3>
+    <div class="socialmedia-cards">
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 1</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 2</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 3</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 4</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 5</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Instagram Post 6</p><span class="watermark">CR Designs ©</span></div>
+    </div>
+  </div>
+
+  <!-- LinkedIn Banners -->
+  <div class="socialmedia-pack">
+    <h3>LinkedIn Banners</h3>
+    <div class="socialmedia-cards">
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 1</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 2</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 3</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 4</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 5</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>LinkedIn Banner 6</p><span class="watermark">CR Designs ©</span></div>
+    </div>
+  </div>
+
+  <!-- Email Headers -->
+  <div class="socialmedia-pack">
+    <h3>Email Headers</h3>
+    <div class="socialmedia-cards">
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 1</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 2</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 3</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 4</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 5</p><span class="watermark">CR Designs ©</span></div>
+      <div class="socialmedia-card" onclick="scrollToOrder('socialOrder')"><p>Email Header 6</p><span class="watermark">CR Designs ©</span></div>
+    </div>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="socialmediaSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .socialmedia-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    margin-bottom: 80px;
+  }
+
+  .socialmedia-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 20px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .socialmedia-pack {
+    margin-bottom: 50px;
+  }
+
+  .socialmedia-pack h3 {
+    font-size: 1.8em;
+    color: #5a2d91;
+    margin-bottom: 20px;
+  }
+
+  .socialmedia-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .socialmedia-card {
+    position: relative;
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .socialmedia-card:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 0.8em;
+    color: rgba(90, 45, 145, 0.4);
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 💜 SOUND + SCROLL SCRIPT -->
+<script>
+  const socialmediaCards = document.querySelectorAll('.socialmedia-card');
+  const socialmediaSound = document.getElementById('socialmediaSound');
+
+  socialmediaCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      socialmediaSound.currentTime = 0;
+      socialmediaSound.play();
+    });
+  });
+
+  function scrollToOrder(orderId) {
+    const orderSection = document.getElementById(orderId);
+    if (orderSection) {
+      orderSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+
+<!-- 🌸 PRICING SECTION -->
+<section id="pricing" class="pricing-section">
+  <h2>Pricing</h2>
+  <p>Clear and transparent pricing for all my creative designs.</p>
+
+  <div class="pricing-table">
+    <div class="pricing-card">
+      <h3>Affirmation Pack</h3>
+      <p>USD $20 <br> ZAR R380</p>
+      <p>Set of pastel affirmation cards to inspire positivity.</p>
+      <a href="#gallery" class="order-button">Order Now</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Journaling Pages</h3>
+      <p>USD $30 <br> ZAR R570</p>
+      <p>Mindful journaling templates for reflection and growth.</p>
+      <a href="#journaling" class="order-button">Order Now</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Social Media Templates</h3>
+      <p>USD $40 <br> ZAR R760</p>
+      <p>Bright pastel templates for Instagram, LinkedIn, and Email.</p>
+      <a href="#socialmedia" class="order-button">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    margin-bottom: 80px;
+  }
+
+  .pricing-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 20px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-card {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    width: 280px;
+  }
+
+  .pricing-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .pricing-card p {
+    margin-bottom: 15px;
+  }
+
+  .order-button {
+    display: inline-block;
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+    color: #5a2d91;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+
+  .order-button:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+  }
+
+  @keyframes shimmer {
+    from { text-shadow: 0 0 10px #d1a3ff; }
+    to { text-shadow: 0 0 20px #fbc2eb; }
+  }
+</style>
+
+<!-- 🌸 TERMS & CONDITIONS SECTION -->
+<section id="terms" class="terms-section">
+  <h2>Terms & Conditions</h2>
+  <p>By purchasing or engaging with my creative services, you agree to the following:</p>
+
+  <ul>
+    <li><strong>Payments:</strong> No work, designs, or services will commence until full payment has been received and cleared. All payments are final and non-refundable. Once an order is placed and payment is made, satisfaction is deemed agreed upon.</li>
+
+    <li><strong>Copyright & Usage:</strong> All designs, images, and creative work produced by me remain my intellectual property and are protected under copyright law. Sharing, distributing, or reselling my work to third parties without written consent is strictly prohibited.</li>
+
+    <li><strong>Indemnity:</strong> I cannot be held responsible for any loss, damage, or misuse of photos, images, or designs provided to me. Clients are encouraged to use their own original and personal materials. I am not liable for any content that may appear on public or media platforms, including AI-generated or platform-generated designs, images, or code.</li>
+
+    <li><strong>Media & Platforms:</strong> I make use of various creative tools, AI technologies, and social/media platforms to produce designs. I am not responsible for how these platforms may process, store, or display content. Any risks associated with third-party platforms are accepted by the client.</li>
+
+    <li><strong>Client Responsibility:</strong> Sending and using personal photos, images, or work is always recommended. I am not liable for any issues arising from third-party or AI-generated content.</li>
+
+    <li><strong>No Free Work:</strong> Requests for additional work, revisions, or new designs outside the agreed scope will require new payment. Free work or repeated redesigns are not provided.</li>
+  </ul>
+
+  <p>By proceeding with any purchase or design request, you acknowledge and accept these Terms & Conditions.</p>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .terms-section {
+    text-align: left;
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    border-top: 2px solid #d8b4e2;
+    margin-bottom: 80px;
+    font-size: 1em;
+    color: #5a2d91;
+  }
+
+  .terms-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(180, 120, 255, 0.4);
+  }
+
+  .terms-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    line-height: 1.6;
+  }
+
+  .terms-section li {
+    margin-bottom: 15px;
+  }
+</style>
+
+<!-- 🌸 CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you’d like to collaborate or learn more about my work, feel free to reach out:</p>
+
+  <!-- ✨ Contact Buttons -->
+  <div class="contact-buttons">
+    <a href="mailto:c6287364r@gmail.com" class="contact-button" id="emailButton">Email Me</a>
+    <a href="https://www.instagram.com/" target="_blank" class="contact-button">Instagram</a>
+    <a href="https://www.linkedin.com/" target="_blank" class="contact-button">LinkedIn</a>
+  </div>
+
+  <!-- 💫 Sound Effect -->
+  <audio id="contactSound" src="sounds/sparkle.mp3" preload="auto"></audio>
+</section>
+
+<!-- 🌈 STYLE -->
+<style>
+  .contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f4fb, #e8d9f5);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 80px;
+  }
+
+  .contact-section h2 {
+    font-size: 2.5em;
+    color: #6a1b9a;
+    text-shadow: 0 0 15px rgba(180, 120, 255, 0.4);
+    margin-bottom: 10px;
+    animation: shimmer 3s infinite alternate;
+  }
+
+  .contact-section p {
+    color: #7b3fa0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .contact-button {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    color: #5a2d91;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    text-decoration: none;
+  }
+
+  .contact-button:hover {
+    box-shadow: 0 0 25px rgba(240, 171, 252, 0.6);
+    transform: translateY(-3px);
+    background: linear-gradient(to bottom right, #a6c1ee, #fbc2eb);
+  }
+</style>
+
+<!-- 💜 SOUND SCRIPT -->
+<script>
+  const contactButtons = document.querySelectorAll('.contact-button');
+  const contactSound = document.getElementById('contactSound');
+
+  contactButtons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      contactSound.currentTime = 0;
+      contactSound.play();
+    });
+  });
+</script>
+
+
+  <footer class="footer">
+    <p>&copy; 2026 Charlene Rossouw</p>
+  </footer>
+</body>
+</html>
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar a");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+
+        // Highlight current nav link
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<
+ <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">
+  ↑
+  <span class="star">★</span>
+  <span class="dust"></span>
+</button>
+
+<!-- Sparkle Sound -->
+<audio id="chimeSound" src="sounds/chimesounds.wav" preload="auto"></audio>
+
+<style>
+/* --- Button Styling --- */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* radiant pastel gradient */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top.visible {
+  display: flex;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+}
+
+/* --- Star Sparkle --- */
+.star {
+  position: absolute;
+  font-size: 18px;
+  color: gold;
+  animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* --- Dust Trail --- */
+.dust {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 10%, transparent 70%);
+  border-radius: 50%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+</style>
+
+<script>
+// --- Element References ---
+const backToTop = document.getElementById("backToTop");
+const chimeSound = document.getElementById("chimeSound");
+
+// --- Scroll Visibility ---
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
+  }
+});
+
+// --- Back-to-Top Button with Sound + Fade ---
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  chimeSound.currentTime = 0;
+  chimeSound.volume = 0;
+  chimeSound.play();
+
+  // Fade-in
+  const fadeIn = setInterval(() => {
+    if (chimeSound.volume < 1) {
+      chimeSound.volume += 0.1;
+    } else {
+      clearInterval(fadeIn);
+    }
+  }, 100);
+
+  // Fade-out after 2 seconds
+  setTimeout(() => {
+    const fadeOut = setInterval(() => {
+      if (chimeSound.volume > 0) {
+        chimeSound.volume -= 0.1;
+      } else {
+        clearInterval(fadeOut);
+        chimeSound.pause();
+        chimeSound.currentTime = 0; // reset to start
+      }
+    }, 100);
+  }, 2000);
+});
+</script>
+
+   
